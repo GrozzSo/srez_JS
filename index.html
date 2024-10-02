@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutritionist</title>
+    <link rel="shortcut icon" href="assets/img/favicon/favic.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+
+<body>
+    <!-- шапка сайта -->
+    <header>
+        <div class="header__content">
+            <div class="logo">
+                <img src="assets/img/header/Logo.png" alt="">
+            </div>
+            <nav>
+                <div class="menu">
+                    <div class="header__btn" setActiveButton(this) onclick="toggleDropdown()">Home</div>
+                    <div id="myDropdown" class="dropdown-content">
+                        <p>Home 1</p>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="header__btn" setActiveButton(this) onclick="toggleDropdown2()">About</div>
+                    <div id="myDropdown2" class="dropdown-content">
+                        <p>
+                            About 1
+                        </p>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="header__btn" setActiveButton(this) onclick="toggleDropdown3()">Team</div>
+                    <div id="myDropdown3" class="dropdown-content">
+                        <p>Team 1</p>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- конец шапки сайта -->
+
+    <!-- баннер -->
+    <div class="banner section">
+        <h2>
+            Our Testimonials
+        </h2>
+        <p class="ta-c">
+            Our satisfied clients share their success stories and experiences on their journey to better health and
+            well-being.
+        </p>
+    </div>
+    <!-- конец баннера -->
+
+    <!-- Слайдер -->
+    <div class="slider section">
+        <div class="slides">
+            <div class="slide">
+                <p class="slider__text">
+                    I can't thank Nutritionist enough for their personalized nutrition coaching. It has completely
+                    transformed
+                    my approach
+                    to food and helped me shed those extra pounds. Highly recommended!
+                </p>
+                <div class="people">
+                    <img src="Assets/img/slider/home.png" alt="">
+                    <p>
+                        Jennifer Anderson
+                    </p>
+                </div>
+            </div>
+            <div class="slide">
+                <p class="slider__text">
+                    Nutritionist has been a game-changer for me. The expert guidance and support I received from their
+                    team made my weight
+                    loss journey so much easier. Thank you!
+                </p>
+                <div class="people">
+                    <img src="Assets/img/slider/about.png" alt="">
+                    <p>
+                        Jennifer Anderson
+                    </p>
+                </div>
+            </div>
+            <div class="slide">
+                <p class="slider__text">
+                    I had struggled with my weight for years until I found Nutritionist. Their personalized approach and
+                    tailored nutrition
+                    plan made all the difference. I've never felt better!
+                </p>
+                <div class="people">
+                    <img src="Assets/img/slider/Team.png" alt="">
+                    <p>
+                        Jennifer Anderson
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slider__nav">
+            <button class="prev" onclick="changeSlide(-1)">
+                <svg width="20" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.25 1.5L1.75 10L10.25 18.5" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <div class="elips">
+                <div class="elip active"></div>
+                <div class="elip"></div>
+                <div class="elip"></div>
+            </div>
+            <button class="next" onclick="changeSlide(1)">
+                <svg width="20" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.75 1.5L10.25 10L1.75 18.5" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <!-- Слайдер конец  -->
+
+    <!-- Начало карточек -->
+    <div class="catalog section">
+        <h2>
+            Our Pricing
+        </h2>
+        <p class="ta-c">
+            We outline our flexible and affordable options to support you on your journey to optimal health and
+            nutrition. Webelieve that
+            <br>
+            everyone deserves access to personalized nutrition guidance and resources
+        </p>
+
+        <div class="catalog__btn">
+            <div class="tab active" onclick="openTab(event, 'tab1')">Monthly</div>
+            <div class="tab" onclick="openTab(event, 'tab2')">Yearly</div>
+        </div>
+
+        <div class="sale">
+            <p class="ta-c">
+                Save 50% on Yearly
+            </p>
+        </div>
+        <div class="content active" id="tab1">
+            <div class="catalog__cards">
+                <div class="catalog__card">
+                    <div>
+                        <h3>
+                            Basic Plan
+                        </h3>
+                        <p class="catalog__sell">
+                            Up to 50% off on Yearly Plan
+                        </p>
+                    </div>
+                    <p class="catalog__card__text">
+                        Get started on your health journey with our Basic Plan. It includes personalized nutrition
+                        coaching,
+                        access to our app,
+                        meal planning assistance, and email support.
+                    </p>
+                    <div class="price">
+                        <p>
+                            $49 <span>/month</span>
+                        </p>
+                    </div>
+
+                    <a href="#" class="btn">
+                        Choose Plan
+                    </a>
+                </div>
+                <div class="catalog__card">
+                    <div>
+                        <h3>
+                            Premium Plan
+                        </h3>
+                        <p class="catalog__sell">
+                            Up to 50% off on Yearly Plan
+                        </p>
+                    </div>
+                    <p class="catalog__card__text">
+                        Upgrade to our Premium Plan for enhanced features. In addition to the Basic Plan, you'll receive
+                        video consultations,
+                        priority support, and personalized recipe recommendations.
+                    </p>
+                    <div class="price">
+                        <p>
+                            $79<span>/month</span>
+                        </p>
+                    </div>
+
+                    <a href="#" class="btn">
+                        Choose Plan
+                    </a>
+                </div>
+                <div class="catalog__card">
+                    <div>
+                        <h3>
+                            Basic Plan
+                        </h3>
+                        <p class="catalog__sell">
+                            Up to 50% off on Yearly Plan
+                        </p>
+                    </div>
+                    <p class="catalog__card__text">
+                        Experience the full benefits of personalized nutrition coaching with our Ultimate Plan. Enjoy
+                        all
+                        the features of the
+                        Premium Plan, along with 24/7 chat support and exclusive workshops.
+                    </p>
+                    <div class="price">
+                        <p>
+                            $99 <span>/month</span>
+                        </p>
+                    </div>
+
+                    <a href="#" class="btn">
+                        Choose Plan
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="tab2">
+            <div class="catalog__cards">
+                <div class="catalog__card">
+                    <div>
+                        <h3>
+                            Basic Plan 1
+                        </h3>
+                        <p class="catalog__sell">
+                            Up to 50% off on Yearly Plan
+                        </p>
+                    </div>
+                    <p class="catalog__card__text">
+                        Get started on your health journey with our Basic Plan. It includes personalized nutrition
+                        coaching,
+                        access to our app,
+                        meal planning assistance, and email support.
+                    </p>
+                    <div class="price">
+                        <p>
+                            $294 <span>/month</span>
+                        </p>
+                    </div>
+
+                    <a href="#" class="btn">
+                        Choose Plan
+                    </a>
+                </div>
+                <div class="catalog__card">
+                    <div>
+                        <h3>
+                            Premium Plan
+                        </h3>
+                        <p class="catalog__sell">
+                            Up to 50% off on Yearly Plan
+                        </p>
+                    </div>
+                    <p class="catalog__card__text">
+                        Upgrade to our Premium Plan for enhanced features. In addition to the Basic Plan, you'll receive
+                        video consultations,
+                        priority support, and personalized recipe recommendations.
+                    </p>
+                    <div class="price">
+                        <p>
+                            $474<span>/month</span>
+                        </p>
+                    </div>
+
+                    <a href="#" class="btn">
+                        Ultimate Plan
+                    </a>
+                </div>
+                <div class="catalog__card">
+                    <div>
+                        <h3>
+                            Basic Plan
+                        </h3>
+                        <p class="catalog__sell">
+                            Up to 50% off on Yearly Plan
+                        </p>
+                    </div>
+                    <p class="catalog__card__text">
+                        Experience the full benefits of personalized nutrition coaching with our Ultimate Plan. Enjoy
+                        all
+                        the features of the
+                        Premium Plan, along with 24/7 chat support and exclusive workshops.
+                    </p>
+                    <div class="price">
+                        <p>
+                            $594 <span>/month</span>
+                        </p>
+                    </div>
+
+                    <a href="#" class="btn">
+                        Choose Plan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- конец карточек -->
+
+    <!-- мадльное окно с телефоном-->
+    <div class="modal-faq section" id="phoneModal">
+        <div class="modal-faq__item">
+            <div class="modal-3s__item-ico">
+                <svg width="24" height="24" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2.625 6.375C2.625 4.02779 4.52779 2.125 6.875 2.125H8.81814C10.037 2.125 11.0995 2.95454 11.3951 4.13701L12.9616 10.4032C13.2208 11.44 12.8334 12.5312 11.9784 13.1724L10.1458 14.5469C9.9555 14.6896 9.91413 14.8986 9.96758 15.0446C11.5762 19.4359 15.0641 22.9238 19.4554 24.5324C19.6014 24.5859 19.8104 24.5445 19.9531 24.3542L21.3276 22.5216C21.9688 21.6666 23.06 21.2792 24.0968 21.5384L30.363 23.1049C31.5455 23.4005 32.375 24.463 32.375 25.6819V27.625C32.375 29.9722 30.4722 31.875 28.125 31.875H24.9375C12.6146 31.875 2.625 21.8854 2.625 9.5625V6.375Z"
+                        fill="#CBEA7B" />
+                </svg>
+            </div>
+            <div class="modal-3s__item-txt">
+                +7(967)-(124)-76-87
+            </div>
+            <div class="modal-faq__close" id="closeModal">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.46967 0.46967C0.762563 0.176777 1.23744 0.176777 1.53033 0.46967L7 5.93934L12.4697 0.469671C12.7626 0.176777 13.2374 0.176778 13.5303 0.469671C13.8232 0.762564 13.8232 1.23744 13.5303 1.53033L8.06066 7L13.5303 12.4697C13.8232 12.7626 13.8232 13.2374 13.5303 13.5303C13.2374 13.8232 12.7626 13.8232 12.4697 13.5303L7 8.06066L1.53033 13.5303C1.23744 13.8232 0.762563 13.8232 0.46967 13.5303C0.176777 13.2374 0.176777 12.7626 0.46967 12.4697L5.93934 7L0.46967 1.53033C0.176777 1.23744 0.176777 0.762563 0.46967 0.46967Z"
+                        fill="white" />
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!-- модальное окно с телефоном конец-->
+
+
+    <!-- faq -->
+    <div class="faq section">
+        <h2>
+            FAQ
+        </h2>
+        <p class="ta-c">
+            We address commonly asked questions and provide comprehensive answers to help you navigate your way through
+            your
+            <br>
+            nutrition and wellness journey.
+        </p>
+        <div class="faq-bg">
+            <div class="faq__c ard">
+                <div class="accordion_container">
+                    <div class="accordion">
+                        <h3>
+                            What is personalized nutrition coaching?
+                        </h3>
+                        <div class="faq__btn">
+                            <img src="Assets/img/faq/faq__btn.png" alt="">
+                        </div>
+                    </div>
+                    <p class="panel">
+                        Personalized nutrition coaching involves creating a customized nutrition plan based on
+                        your
+                        unique goals, preferences,
+                        and dietary requirements. Our team of experts will <br> work closely with you to develop
+                        a
+                        plan
+                        that
+                        fits your lifestyle and
+                        helps you achieve optimal health and wellness.
+                    </p>
+                </div>
+            </div>
+            <div class="faq__card">
+                <div class="accordion_container">
+                    <div class="accordion">
+                        <h3>
+                            How can nutrition coaching help me lose weight?
+                        </h3>
+                        <div class="faq__btn">
+                            <img src="Assets/img/faq/faq__btn.png" alt="">
+                        </div>
+                    </div>
+                    <p class="panel">
+                        Thus, the advantage of psychotherapy as an effective way to lose weight is to solve the problem
+                        of excess weight not
+                        only at the level of the stomach and body, but also at the level of consciousness,
+                        subconsciousness and unconsciousness,
+                        which in fact and control the metabolic processes, the processes of saturation and recovery of
+                        the body.
+                    </p>
+                </div>
+            </div>
+            <div class="faq__card">
+                <div class="accordion_container">
+                    <div class="accordion">
+                        <h3>
+                            Can I still enjoy my favorite foods while on a nutrition plan?
+                        </h3>
+                        <div class="faq__btn">
+                            <img src="Assets/img/faq/faq__btn.png" alt="">
+                        </div>
+                    </div>
+                    <p class="panel">
+                        Proper eating habits ensure efficient digestive system function, normal digestion of food,
+                        optimal metabolism, and help
+                        develop a culture of food consumption
+                    </p>
+                </div>
+            </div>
+            <div class="line"></div>
+
+        </div>
+    </div>
+    <!-- faq end -->
+
+    <!-- Модалка через 3 сек-->
+    <div class="modal-3s" id="modal-3s">
+        <div class="section">
+            <div class="modal-3s__container section">
+                <div class="modal-3s__item">
+                    <div class="modal-3s__item-ico">
+                        <svg width="31" height="24" viewBox="0 0 31 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.625 7.28122V19.4375C0.625 21.7847 2.52779 23.6875 4.875 23.6875H26.125C28.4722 23.6875 30.375 21.7847 30.375 19.4375V7.28122L17.7274 15.0644C16.3614 15.905 14.6386 15.905 13.2726 15.0644L0.625 7.28122Z"
+                                fill="#CBEA7B" />
+                            <path
+                                d="M30.375 4.78609V4.5625C30.375 2.21529 28.4722 0.3125 26.125 0.3125H4.875C2.52779 0.3125 0.625 2.21529 0.625 4.5625V4.78609L14.3863 13.2546C15.0693 13.6749 15.9307 13.6749 16.6137 13.2546L30.375 4.78609Z"
+                                fill="#CBEA7B" />
+                        </svg>
+                    </div>
+                    <div class="modal-3s__item-txt">
+                        support@nutritionist.com
+                    </div>
+                </div>
+                <div class="modal-3s__item">
+                    <div class="modal-3s__item-ico">
+                        <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M2.625 6.375C2.625 4.02779 4.52779 2.125 6.875 2.125H8.81814C10.037 2.125 11.0995 2.95454 11.3951 4.13701L12.9616 10.4032C13.2208 11.44 12.8334 12.5312 11.9784 13.1724L10.1458 14.5469C9.9555 14.6896 9.91413 14.8986 9.96758 15.0446C11.5762 19.4359 15.0641 22.9238 19.4554 24.5324C19.6014 24.5859 19.8104 24.5445 19.9531 24.3542L21.3276 22.5216C21.9688 21.6666 23.06 21.2792 24.0968 21.5384L30.363 23.1049C31.5455 23.4005 32.375 24.463 32.375 25.6819V27.625C32.375 29.9722 30.4722 31.875 28.125 31.875H24.9375C12.6146 31.875 2.625 21.8854 2.625 9.5625V6.375Z"
+                                fill="#CBEA7B" />
+                        </svg>
+                    </div>
+                    <div class="modal-3s__item-txt">
+                        +7(967)-(124)-76-87
+                    </div>
+                </div>
+                <div class="modal-3s__item">
+                    <div class="modal-3s__item-ico">
+                        <svg width="25" height="29" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.848 28.664C11.8908 28.6888 11.9244 28.7079 11.9482 28.7213L11.9878 28.7434C12.3035 28.9167 12.6952 28.9154 13.0112 28.7439L13.0518 28.7213C13.0756 28.7079 13.1092 28.6888 13.152 28.664C13.2376 28.6144 13.3599 28.5421 13.5136 28.4474C13.821 28.2582 14.2549 27.9791 14.7732 27.6129C15.808 26.8819 17.1888 25.7972 18.5726 24.3804C21.3268 21.5605 24.1875 17.3237 24.1875 11.875C24.1875 5.42017 18.9548 0.1875 12.5 0.1875C6.04517 0.1875 0.8125 5.42017 0.8125 11.875C0.8125 17.3237 3.67321 21.5605 6.4274 24.3804C7.81119 25.7972 9.19196 26.8819 10.2268 27.6129C10.7451 27.9791 11.179 28.2582 11.4864 28.4474C11.6401 28.5421 11.7624 28.6144 11.848 28.664ZM12.5 16.125C14.8472 16.125 16.75 14.2222 16.75 11.875C16.75 9.52779 14.8472 7.625 12.5 7.625C10.1528 7.625 8.25 9.52779 8.25 11.875C8.25 14.2222 10.1528 16.125 12.5 16.125Z"
+                                fill="#CBEA7B" />
+                        </svg>
+                    </div>
+                    <div class="modal-3s__item-txt">
+                        Some Where in the World
+                    </div>
+                </div>
+                <div class="modal-3s__close" id="">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.46967 0.46967C0.762563 0.176777 1.23744 0.176777 1.53033 0.46967L7 5.93934L12.4697 0.469671C12.7626 0.176777 13.2374 0.176778 13.5303 0.469671C13.8232 0.762564 13.8232 1.23744 13.5303 1.53033L8.06066 7L13.5303 12.4697C13.8232 12.7626 13.8232 13.2374 13.5303 13.5303C13.2374 13.8232 12.7626 13.8232 12.4697 13.5303L7 8.06066L1.53033 13.5303C1.23744 13.8232 0.762563 13.8232 0.46967 13.5303C0.176777 13.2374 0.176777 12.7626 0.46967 12.4697L5.93934 7L0.46967 1.53033C0.176777 1.23744 0.176777 0.762563 0.46967 0.46967Z"
+                            fill="white" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- модалка через 3 сек конец-->
+
+
+
+
+
+
+    <!-- скрипт  -->
+
+    <script src="assets/JS/main.js"> </script>
+
+    <!-- скрипт -->
+</body>
+
+</html>
